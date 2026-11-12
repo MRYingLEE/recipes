@@ -1,5 +1,5 @@
 context:
-  version: 1.25.0
+  version: 1.31.1
 
 package:
   name: onnxruntime-cpp
@@ -7,7 +7,7 @@ package:
 
 source:
 - url: https://github.com/microsoft/onnxruntime/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 071d31a593082dd1d3a8ff3db8a78fba4e3d841653e225e807b1eb709da5f56f
+  sha256: 92ffbf8b97872fd1e73c9eebdf3319d9a3b24919ae438d27db903b72ee08939e
 
 build:
   number: 0
@@ -28,6 +28,8 @@ tests:
     - libonnxruntime_webassembly.a
     include:
     - onnxruntime/**
+  files:
+  - share/emdawnwebgpu/emdawnwebgpu.port.py
 - script:
   - bash build_tests.sh
   requirements:

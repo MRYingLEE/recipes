@@ -1,5 +1,5 @@
 context:
-  version: 10.8.4
+  version: 10.8.13
 
 package:
   name: passagemath-categories
@@ -7,7 +7,7 @@ package:
 
 source:
 - url: https://pypi.org/packages/source/p/passagemath-categories/passagemath_categories-${{ version }}.tar.gz
-  sha256: b38a13dcec15507b17474f06c45c64153d890a39ef147c1303acc310ef3da9ba
+  sha256: f0d8be178a04d84920710231308914e6e3d9aefe259cfcf8c14db8a9789d3e57
 
 build:
   script: ${{ PYTHON }} -m pip install .
@@ -23,7 +23,7 @@ requirements:
   - pip
   - passagemath-setup
   - passagemath-environment
-  - cython
+  - cython<3.3
   - gmpy2
   - cysignals
   - pkgconfig

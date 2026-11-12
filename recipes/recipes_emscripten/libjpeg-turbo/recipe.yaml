@@ -1,5 +1,5 @@
 context:
-  version: 3.1.4
+  version: 3.2.1
   name: libjpeg-turbo
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/libjpeg-turbo/libjpeg-turbo/archive/${{ version }}.tar.gz
-  sha256: 3a581ad5a3060cee69487aae0bc71a1f3be94b89f92215e32b43742ec4a5055c
+  sha256: 6f5819c51649bce2571a23b1b0cd41eae2f57fc3f8908c7ec9e7047efb65ca13
 
 build:
   number: 0

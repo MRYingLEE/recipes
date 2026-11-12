@@ -1,22 +1,21 @@
 context:
   name: r-mgcv
-  version: 1.9-4
+  version: 1.9-5
 
 package:
   name: ${{ name }}
-  version: ${{ version|replace('-', '_') }}
+  version: ${{ version | replace('-', '_') }}
 
 source:
   url:
   - https://cran.r-project.org/src/contrib/${{ name[2:] }}_${{ version }}.tar.gz
   - https://cloud.r-project.org/src/contrib/${{ name[2:] }}_${{ version }}.tar.gz
-  sha256: a98159698afb269e06a46cac1f945bf2b3427a2dd587c6f2efd67ede90089372
+  sha256: d079c68e500708de4df79692e83493636004915dc6689cd7350e226291abd992
 
 build:
-  number: 4
-  string: r${{ r_abi_build_tag }}_h${{ hash }}_${{ build_number }}
-  # TODO: flang needs to be rebuilt to install r-base in build environment.
-  skip: ${{ r_abi_build_tag == 453 }}
+  number: 0
+  # Dependencies not yet available for R 4.6.0 on conda-forge
+  skip: ${{ r_base >= '4.6.0' }}
   script: $R CMD INSTALL $R_ARGS .
 
 requirements:
@@ -26,9 +25,10 @@ requirements:
   - r-nlme
   - r-matrix
   host:
-  - libblas>=3.12
-  - liblapack>=3.12
-  - libflang                  # for FortranRuntime
+  - r-base ==${{ r_base }}
+  - libblas
+  - liblapack
+  - libflang
   - r-nlme
   - r-matrix
   run:

@@ -1,6 +1,6 @@
 context:
   name: aiohttp
-  version: 3.12.2
+  version: 3.14.5
 
 package:
   name: ${{ name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 0018956472ee535d2cad761a5bb88eb4ad80f94cd86472cee26a244799f7c79f
+  sha256: 5558a7f5a05af9ecf744af91e5baefc436f93c9333e656c27ec253f9a6bbe178
 
 build:
   number: 0

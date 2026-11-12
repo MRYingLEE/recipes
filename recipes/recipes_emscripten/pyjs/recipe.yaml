@@ -1,10 +1,10 @@
 context:
-  version: 4.0.3
+  version: 4.1.0
   name: pyjs
 
 source:
   url: https://github.com/emscripten-forge/pyjs/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 7182baa6b152b11cd9146c251d1eab09b0c08d3a11959b43e2970e061a92018e
+  sha256: 0fbbb924da5ab7b83078e1ba5175dc771b8716808b51c465fdabe0b73cfba8cb
 
 build:
   number: 0

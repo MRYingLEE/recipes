@@ -1,5 +1,5 @@
 context:
-  version: 10.8.4
+  version: 10.8.13
 
 package:
   name: passagemath-graphs
@@ -7,7 +7,7 @@ package:
 
 source:
 - url: https://pypi.org/packages/source/p/passagemath-graphs/passagemath_graphs-${{ version }}.tar.gz
-  sha256: f8efc0c088fcfc1ce0980312cbb9bfe33691f790c1627405ccfb64832185a053
+  sha256: ba79e37599cdf98ba6976e9605c34b7c799b5d70c644e180c8caa691bc6c44a1
 
 build:
   script: ${{ PYTHON }} -m pip install .
@@ -23,7 +23,7 @@ requirements:
   - pip
   - passagemath-setup
   - passagemath-environment
-  - cython
+  - cython<3.3
   - gmpy2
   - cysignals
   - pkgconfig

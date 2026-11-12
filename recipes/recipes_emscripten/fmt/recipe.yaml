@@ -1,6 +1,6 @@
 context:
   name: fmt
-  version: 12.1.0
+  version: 12.2.1
 
 package:
   name: ${{ name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/fmtlib/fmt/archive/${{ version }}.tar.gz
-  sha256: ea7de4299689e12b6dddd392f9896f08fb0777ac7168897a244a6d6085043fea
+  sha256: 449374d74f31b67796dece454d59b93e6f1538efcce0e9ac78000c98142c139e
 
 build:
   number: 0

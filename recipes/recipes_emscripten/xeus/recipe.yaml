@@ -1,5 +1,5 @@
 context:
-  version: 6.0.5
+  version: 6.2.0
 
 package:
   name: xeus
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/jupyter-xeus/xeus/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 32a36d587c1dc4dee8e8f65dffb90e8bac910c5de3f723ed7f24a99aec447138
+  sha256: 9bf8ccd9eb71f2bc7192201c8f5ce09be25a38623b47f161f61c2a6db4e90031
 
 build:
   number: 0
